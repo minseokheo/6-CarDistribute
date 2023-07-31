@@ -1,0 +1,6 @@
+car
+minibus
+bus
+truck
+trailer
+motorcycle
