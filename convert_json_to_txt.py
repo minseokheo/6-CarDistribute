@@ -4,12 +4,12 @@ import os
 import re
 
 
-path='/home/vislab/UAV/gdrive/datatestfolder/[원천]범계사거리/범계사거리/AY0001013/'
+path='C:/Users/HOME/Desktop/data/data/Training/data/[원천]원골네거리/원골네거리/SC5798504/'
 #filelist=os.listdir(path)
 
 #sortfile=sorted(filelist, key=lambda x: int(re.split('[' + separators + ']',x)[3]))
 #print(sortfile)
-with open('/home/vislab/UAV/gdrive/datatestfolder/범계사거리_AY0001013.json', 'r') as f:
+with open(path+'/원골네거리_SC5798504.json', 'r',encoding = 'utf-8') as f:
     data = json.load(f)
 
 
@@ -25,7 +25,7 @@ for i in images:
             name=i['file_name']
             new=re.split('['+separators+']',name)[1] # 숫자 파일 명만 남김 ex) AY0001013/20201222_153520_3_1710.jpg -> 20201222_153520_3_1710
             #print(new)
-            f=open('/home/vislab/UAV/gdrive/datatestfolder/[원천]범계사거리/범계사거리/AY0001013/label/'+new+'.txt','w') #좌표 바꿀 파일 생성
+            f=open(path+new+'.txt','w') #좌표 바꿀 파일 생성
             img = Image.open(path+new+'.jpg') # 이미지 파일 열기
             width, height = img.size # 이미지의 너비와 높이 가져오기
             print(annoid)
