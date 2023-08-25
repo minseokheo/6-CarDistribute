@@ -1,0 +1,17 @@
+1. YOLOv5 설치
+-> https://github.com/ultralytics/yolov5 참고
+
+2. SORT 설치
+-> https://github.com/abewley/sort 참고
+
+3. detect.py 실행 
+(yolo명령어 정리에서 python detect.py 명령어 참고)
+
+4. detection해서 나온 좌표를 convert_format.py를 이용하여 형태를 바꿔줌.
+
+5. Tracking.py 파일을 통해 트래킹.
+
+6. 트래킹 결과 동영상을 slicevideo.py를 이용하여 이미지로 자르기
+
+7. 트래킹 하여 나온 좌표 파일 (Tracking_coordinate.txt)과 자른 이미지를 이용하여
+ParkingVehicleCount.py 실행
